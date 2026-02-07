@@ -1,0 +1,34 @@
+{
+  "model_performance": {
+    "r2_score": 0.8190488131125021,
+    "mae": 29.435321973005376,
+    "accuracy_percentage": 81.90488131125021
+  },
+  "feature_columns": [
+    "BHK",
+    "Size_in_SqFt",
+    "Year_Built",
+    "Floor_No",
+    "Total_Floors",
+    "Nearby_Schools",
+    "Nearby_Hospitals",
+    "Amenities_Score",
+    "Age_of_Property",
+    "State",
+    "City",
+    "Property_Type",
+    "Furnished_Status",
+    "Public_Transport_Accessibility",
+    "Parking_Space",
+    "Security",
+    "Facing",
+    "Owner_Type",
+    "Availability_Status"
+  ],
+  "target_stats": {
+    "min": 6.147985768021765,
+    "max": 1325.6327701297123,
+    "mean": 144.31937728407283,
+    "std": 117.36133238945149
+  }
+}
