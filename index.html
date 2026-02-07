@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏠 IndiaHome - AI House Price Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-home"></i>
+                <span>IndiaHome</span>
+            </div>
+            <nav class="nav">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">
+                Discover Your Dream Home's
+                <span class="gradient-text">True Value</span>
+            </h1>
+            <p class="hero-subtitle">
+                AI-powered house price prediction for Indian real estate. Get accurate valuations with 80.97% accuracy.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">80.97%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">States</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Properties</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Form -->
+    <section class="prediction-form">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Property Details</h2>
+                    <p>Enter your property information for instant price prediction</p>
+                </div>
+
+                <form id="predictionForm">
+                    <!-- Basic Info -->
+                    <div class="form-section">
+                        <h3>📍 Location & Type</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="State">State</label>
+                                <select id="State" required>
+                                    <option value="">Select State</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="telangana">Telangana</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="tamil_nadu">Tamil Nadu</option>
+                                    <option value="gujarat">Gujarat</option>
+                                    <option value="rajasthan">Rajasthan</option>
+                                    <option value="west_bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="City">City</label>
+                                <select id="City" required>
+                                    <option value="">Select City</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Property_Type">Property Type</label>
+                                <select id="Property_Type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="independent_house">Independent House</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="duplex">Duplex</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="BHK">BHK</label>
+                                <select id="BHK" required>
+                                    <option value="">Select BHK</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4 BHK</option>
+                                    <option value="5">5 BHK</option>
+                                    <option value="6">6 BHK</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property Details -->
+                    <div class="form-section">
+                        <h3>🏠 Property Specifications</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Size_in_SqFt">Size (Sq Ft)</label>
+                                <input type="number" id="Size_in_SqFt" min="400" max="4000" step="50" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Year_Built">Year Built</label>
+                                <input type="number" id="Year_Built" min="1990" max="2024" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Floor_No">Floor Number</label>
+                                <input type="number" id="Floor_No" min="0" max="30" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Total_Floors">Total Floors</label>
+                                <input type="number" id="Total_Floors" min="1" max="40" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Furnished_Status">Furnished Status</label>
+                                <select id="Furnished_Status" required>
+                                    <option value="">Select Status</option>
+                                    <option value="unfurnished">Unfurnished</option>
+                                    <option value="semi_furnished">Semi Furnished</option>
+                                    <option value="fully_furnished">Fully Furnished</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Facing">Facing Direction</label>
+                                <select id="Facing" required>
+                                    <option value="">Select Direction</option>
+                                    <option value="north">North</option>
+                                    <option value="south">South</option>
+                                    <option value="east">East</option>
+                                    <option value="west">West</option>
+                                    <option value="north_east">North East</option>
+                                    <option value="north_west">North West</option>
+                                    <option value="south_east">South East</option>
+                                    <option value="south_west">South West</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Amenities -->
+                    <div class="form-section">
+                        <h3>🏛️ Location & Amenities</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Nearby_Schools">Nearby Schools</label>
+                                <input type="number" id="Nearby_Schools" min="1" max="15" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Nearby_Hospitals">Nearby Hospitals</label>
+                                <input type="number" id="Nearby_Hospitals" min="1" max="10" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Public_Transport_Accessibility">Transport Access</label>
+                                <select id="Public_Transport_Accessibility" required>
+                                    <option value="">Select Access</option>
+                                    <option value="poor">Poor</option>
+                                    <option value="average">Average</option>
+                                    <option value="good">Good</option>
+                                    <option value="excellent">Excellent</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Amenities_Score">Amenities Score (0-10)</label>
+                                <input type="number" id="Amenities_Score" min="0" max="10" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Parking_Space">Parking Space</label>
+                                <select id="Parking_Space" required>
+                                    <option value="">Select</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Security">Security</label>
+                                <select id="Security" required>
+                                    <option value="">Select Security</option>
+                                    <option value="no">No Security</option>
+                                    <option value="basic">Basic</option>
+                                    <option value="high">High Security</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="Owner_Type">Owner Type</label>
+                                <select id="Owner_Type" required>
+                                    <option value="">Select Owner</option>
+                                    <option value="owner">Owner</option>
+                                    <option value="broker">Broker</option>
+                                    <option value="builder">Builder</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="Availability_Status">Availability</label>
+                                <select id="Availability_Status" required>
+                                    <option value="">Select Status</option>
+                                    <option value="ready">Ready to Move</option>
+                                    <option value="under_construction">Under Construction</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hidden Age field (auto-calculated) -->
+                    <input type="hidden" id="Age_of_Property" value="5">
+
+                    <!-- Sample Data Buttons -->
+                    <div class="sample-buttons">
+                        <h3>🎯 Try Sample Properties</h3>
+                        <div class="sample-grid">
+                            <button type="button" class="sample-btn" id="sampleMumbai">
+                                <i class="fas fa-building"></i>
+                                <span>Mumbai Apartment</span>
+                                <small>₹245L Expected</small>
+                            </button>
+                            <button type="button" class="sample-btn" id="sampleBangalore">
+                                <i class="fas fa-home"></i>
+                                <span>Bangalore Villa</span>
+                                <small>₹180L Expected</small>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="predict-btn">
+                            <i class="fas fa-calculator"></i>
+                            Predict House Price
+                        </button>
+                        <button type="button" class="reset-btn" id="resetForm">
+                            <i class="fas fa-refresh"></i>
+                            Reset Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-card" id="resultsCard" style="display: none;">
+                <div class="results-header">
+                    <h2>🎯 Price Prediction Result</h2>
+                </div>
+                <div class="results-body">
+                    <div class="price-display">
+                        <div class="price-main" id="predictedPrice">₹0 Lakhs</div>
+                        <div class="price-sub" id="predictedPriceINR">₹0</div>
+                        <div class="confidence" id="confidence">85% Confidence</div>
+                    </div>
+                    <div class="model-info">
+                        <p><strong>Model:</strong> Gradient Boosting Regressor</p>
+                        <p><strong>Accuracy:</strong> 80.97%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 IndiaHome - AI-Powered House Price Prediction</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
