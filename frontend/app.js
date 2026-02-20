@@ -16,7 +16,7 @@ class IndianHousePricePredictor {
         this.sampleData = {
             mumbai: {
                 State: "maharashtra",
-                City: "mumbai",
+                City: "mumbai",        
                 Property_Type: "apartment",
                 BHK: 3,
                 Size_in_SqFt: 1200,
