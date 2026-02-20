@@ -9,6 +9,11 @@ IndiaHome is a state-of-the-art machine learning application designed to estimat
 
 ---
 
+## 🌐 Live Demo
+**Try the AI Predictor now:** [https://house-rental-using-real-datasets.onrender.com](https://house-rental-using-real-datasets.onrender.com)
+
+---
+
 ## 🌟 Key Features
 - **Accurate Predictions**: Uses Gradient Boosting Regression to capture non-linear market trends.
 - **Dynamic City Loading**: Automatically updates city lists based on the selected Indian state.
